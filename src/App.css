@@ -4,12 +4,28 @@ table,
   text-align: center;
 }
 
-.pagination-button {
-  margin-bottom: 50px;
+button {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #528db5;
+  margin: 0px 5px 0px 5px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: #3678a4;
 }
 
 .bold {
   font-weight: 900;
+}
+
+.c-table {
+  padding: 20px 20px 50px 20px;
 }
 
 /* .app {
@@ -45,12 +61,10 @@ thead {
   line-height: 24px;
   font-family: Lato;
   border: 1px solid transparent;
-
   max-width: 100%;
   font-weight: 900;
   line-height: 24px;
   mix-blend-mode: normal;
-
   color: rgba(51, 51, 51, 0.5);
   background: rgba(255, 255, 255, 0.9);
 }
@@ -58,7 +72,6 @@ thead {
 thead tr th {
   padding: 15px 15px;
   border: 1px solid transparent;
-
   text-align: center;
 }
 
@@ -76,56 +89,4 @@ tbody tr:hover {
 
 td {
   padding: 15px 15px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul.pagination {
-  margin-top: 0;
-  margin-bottom: 0;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-/* ul.pagination li.page-item.active a.page-link {
-  color: #445565 !important;
-  background-color: #e3e7eb !important;
-  border-color: #ced4da !important;
-}
-
-ul.pagination a.page-link {
-  padding: 0.75rem 1rem;
-  min-width: 3.5rem;
-  text-align: center;
-  box-shadow: none !important;
-  border-color: #ced4da !important;
-  color: #6b88a4;
-  font-weight: 900;
-  font-size: 1rem;
-} */
-
-ul.pagination li.page-item.active .page-number {
-  color: #445565 !important;
-  background-color: #e3e7eb !important;
-  border-color: #ced4da !important;
-}
-
-ul.pagination p {
-  padding: 0.75rem 1rem;
-  min-width: 3.5rem;
-  text-align: center;
-  box-shadow: none !important;
-  border-color: #ced4da !important;
-  color: #6b88a4;
-  font-weight: 900;
-  font-size: 1rem;
-}
-
-ul.pagination a.page-number:hover {
-  background-color: #f4f4f4;
-}
-
-.pagination {
-  display: flex;
 }
