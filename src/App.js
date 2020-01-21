@@ -42,11 +42,12 @@ class App extends React.Component {
     });
   };
 
-  handleDataVisibility = () => {
+  handleDataVisibility = e => {
     const { showAllData } = this.state;
 
     this.setState({
-      showAllData: !showAllData
+      showAllData: !showAllData,
+      sort: { direction: "none" }
     });
   };
 
@@ -113,7 +114,7 @@ class App extends React.Component {
         <h1>Sortable Table</h1>
         <hr />
         <p>Selected data:</p>
-        {isActive > -1 ? (
+        {isActive !== null && isActive > -1 ? (
           <>
             <div className="bold">
               Photo ID:
