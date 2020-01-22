@@ -43,7 +43,7 @@ class App extends React.Component {
     });
   };
 
-  handleDataVisibility = e => {
+  handleDataVisibility = () => {
     const { showAllData } = this.state;
 
     this.setState({
@@ -140,7 +140,7 @@ class App extends React.Component {
           "none"
         )}
         <hr />
-        <button onClick={e => this.handleDataVisibility(e)}>
+        <button onClick={this.handleDataVisibility}>
           {showAllData ? "Show Paginated Data" : "Show All Data"}
         </button>
         <hr />
