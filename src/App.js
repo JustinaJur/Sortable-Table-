@@ -13,7 +13,7 @@ class App extends React.Component {
     showAllData: false,
     currentPage: 1,
     sort: {
-      direction: "none"
+      direction: "asc"
     },
     isActive: -1
   };
@@ -30,14 +30,15 @@ class App extends React.Component {
   paginate = pageNumber => {
     const { data } = this.state;
 
+    const dataToShow = data[0].id !== 1 ? data.reverse() : data;
     const indexOfLastPost = pageNumber * 10;
     const indexOfFirstPost = indexOfLastPost - 10;
-    const currentData = data.slice(indexOfFirstPost, indexOfLastPost);
+    const currentData = dataToShow.slice(indexOfFirstPost, indexOfLastPost);
 
     this.setState({
       currentData,
       sort: {
-        direction: "none"
+        direction: "asc"
       }
     });
   };
@@ -47,7 +48,7 @@ class App extends React.Component {
 
     this.setState({
       showAllData: !showAllData,
-      sort: { direction: "none" }
+      sort: { direction: "asc" }
     });
   };
 
@@ -139,7 +140,7 @@ class App extends React.Component {
           "none"
         )}
         <hr />
-        <button onClick={this.handleDataVisibility}>
+        <button onClick={e => this.handleDataVisibility(e)}>
           {showAllData ? "Show Paginated Data" : "Show All Data"}
         </button>
         <hr />
