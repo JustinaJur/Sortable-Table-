@@ -31,9 +31,9 @@ class App extends React.Component {
     const { data } = this.state;
 
     const dataToShow = data[0].id !== 1 ? data.reverse() : data;
-    const indexOfLastPost = pageNumber * 10;
-    const indexOfFirstPost = indexOfLastPost - 10;
-    const currentData = dataToShow.slice(indexOfFirstPost, indexOfLastPost);
+    const indexOfLastItem = pageNumber * 10;
+    const indexOfFirstItem = indexOfLastItem - 10;
+    const currentData = dataToShow.slice(indexOfFirstItem, indexOfLastItem);
 
     this.setState({
       currentData,
